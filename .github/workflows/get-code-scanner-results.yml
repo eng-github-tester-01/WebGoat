@@ -19,7 +19,9 @@ jobs:
       # Get GHAS code scanner results
       - name: GHAS code scanner results
         id: ghasCodeScannerResults
-        uses: fjogeleit/http-request-action@v1.10.0
+        timeout-minutes: 10
+        uses: fjogeleit/http-request-action@v1.14.0
+
         with:
           url: "https://api.github.com/repos/eng-github-tester-01/WebGoat/code-scanning/analyses"
           method: "GET"
