@@ -25,5 +25,7 @@ jobs:
           timeout: 600000
           method: 'GET'
           bearerToken: ${{ secrets.PAT_TOKEN }}
-          responseFile: "${{ github.workspace }}/code-scanning-analyses-response.json"
 
+      - name: API Response
+        run: |
+          echo ${{ fromJson(steps.ghasCodeScannerResults.outputs.response).results[0].url == true }}
