@@ -24,7 +24,7 @@ jobs:
           url: "https://api.github.com/repos/eng-github-tester-01/WebGoat/code-scanning/analyses"
           timeout: 60000
           method: 'GET'
-          bearerToken: "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"
+          bearerToken: ${{ secret.PAT_TOKEN }}
       - name: Show Response
         run: |
           echo ${{ steps.ghasCodeScannerResults.outputs.response }}
