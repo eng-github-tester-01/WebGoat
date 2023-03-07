@@ -12,7 +12,7 @@ jobs:
   # Job Name
   get-scanner-results:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       
