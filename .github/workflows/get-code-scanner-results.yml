@@ -28,4 +28,4 @@ jobs:
 
       - name: API Response
         run: |
-          echo ${{ fromJson(steps.ghasCodeScannerResults.outputs.response).results[0].url == true }}
+          echo ${{ fromJson(steps.ghasCodeScannerResults.outputs.response).results[0].url }}
